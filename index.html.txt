@@ -1,2 +1,0 @@
-echo "<!DOCTYPE html><html><head><title>My Portfolio</title></head><body><h1>Hello, I'm Samarth!</h1></body></html>" > index.html
-
