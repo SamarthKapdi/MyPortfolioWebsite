@@ -33,6 +33,15 @@ h2 {
 }
 .btn:hover { background: #e68900; }
 
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;      /* makes it circular */
+  border: 4px solid #fff;  /* white border */
+  margin-bottom: 15px;
+  object-fit: cover;       /* crops nicely */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 /* Navbar */
 .navbar {
   display: flex;
