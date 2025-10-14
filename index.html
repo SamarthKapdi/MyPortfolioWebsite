@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Samarth Kapdi | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f9; color: #333;
-    }
-    header {
-      background: #222; color: #fff; padding: 20px 0; text-align: center;
-    }
-    header h1 { margin: 0; }
-    nav a {
-      color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold;
-    }
-    section { padding: 40px 10%; }
-    h2 { color: #222; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
-    ul { list-style: none; padding: 0; }
-    ul li { margin: 8px 0; }
-    .contact a { color: #0077b5; text-decoration: none; }
-    footer {
-      background: #222; color: #fff; text-align: center; padding: 15px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Samarth Kapdi</h1>
-    <p>3rd Year CSE Student | Java Developer | AI/ML Enthusiast</p>
-    <nav>
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Samarth Kapdi</h1>
+      <p>Java Developer | AI/ML Enthusiast | Problem Solver</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
   </header>
 
-  <!-- Summary -->
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Sections -->
   <section id="summary">
     <h2>Summary</h2>
     <p>3rd-year CSE student with a passion for software development, strong Java skills, and internship experience. Driven to learn, build, and contribute in a team-oriented environment.</p>
   </section>
 
-  <!-- Experience -->
   <section id="experience">
     <h2>Professional Experience</h2>
     <ul>
@@ -62,27 +48,26 @@
     </ul>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li>AI & Cloud Research Agent</li>
-      <li>SMS Spam Detection (NLP)</li>
-      <li>Comprehensive Calculator</li>
-      <li>Online Banking System (Java)</li>
-    </ul>
+    <div class="grid">
+      <div class="card">AI & Cloud Research Agent</div>
+      <div class="card">SMS Spam Detection (NLP)</div>
+      <div class="card">Comprehensive Calculator</div>
+      <div class="card">Online Banking System (Java)</div>
+    </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
-    <p><b>Languages:</b> C, C++, Java (Core & Advanced: JDBC, OOP, Multithreading, Collections, Networking)</p>
-    <p><b>Frameworks/Tools:</b> Spring, JSP/Servlets, HTML/CSS, Git/GitHub, Eclipse, IntelliJ IDEA</p>
-    <p><b>Coursework:</b> DSA, OOP, Software Engineering, OS</p>
-    <p><b>Other:</b> MS Office, Editing, Creative Writing</p>
+    <div class="grid">
+      <div class="card"><b>Languages:</b> C, C++, Java</div>
+      <div class="card"><b>Frameworks:</b> Spring, JSP/Servlets</div>
+      <div class="card"><b>Tools:</b> Git/GitHub, Eclipse, IntelliJ</div>
+      <div class="card"><b>Coursework:</b> DSA, OOP, OS</div>
+    </div>
   </section>
 
-  <!-- Education -->
   <section id="education">
     <h2>Education</h2>
     <ul>
@@ -92,7 +77,6 @@
     </ul>
   </section>
 
-  <!-- Certifications -->
   <section id="certifications">
     <h2>Certifications & Workshops</h2>
     <ul>
@@ -106,21 +90,18 @@
     </ul>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:kapdisamarth26445@gmail.com">kapdisamarth26445@gmail.com</a></p>
-    <p>Phone: 7723811943</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:kapdisamarth26445@gmail.com">kapdisamarth26445@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> 7723811943</p>
     <p>
-      <a href="https://github.com/SamarthKapdi">GitHub</a> |
-      <a href="https://linkedin.com/in/samarthkapdi">LinkedIn</a> |
-      <a href="https://samarthkapdi.github.io/MyPortfolioWebsite">Portfolio</a> |
-      <a href="https://leetcode.com/u/SamarthKapdi">LeetCode</a> |
-      <a href="https://www.hackerrank.com/profile/kapdisamarth2641">HackerRank</a>
+      <a href="https://github.com/SamarthKapdi"><i class="fab fa-github"></i> GitHub</a> |
+      <a href="https://linkedin.com/in/samarthkapdi"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+      <a href="https://leetcode.com/u/SamarthKapdi"><i class="fas fa-code"></i> LeetCode</a> |
+      <a href="https://www.hackerrank.com/profile/kapdisamarth2641"><i class="fas fa-laptop-code"></i> HackerRank</a>
     </p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Samarth Kapdi | Built with ❤️ using HTML & CSS</p>
   </footer>
