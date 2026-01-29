@@ -1,111 +1,830 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Samarth Kapdi | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samarth Kapdi - Java Developer, AI/ML Enthusiast & Problem Solver. Explore my portfolio showcasing innovative projects and technical expertise.">
+    <meta name="keywords" content="Samarth Kapdi, Java Developer, AI ML, Portfolio, Full Stack Developer, Software Engineer">
+    <meta name="author" content="Samarth Kapdi">
+    <title>Samarth Kapdi | Java Developer & AI/ML Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
+    <!-- Cursor Follower -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
     
-      <h1>Samarth Kapdi</h1>
-      <p>Java Developer | AI/ML Enthusiast | Problem Solver</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-  </header>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">SK</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link nav-cta">Let's Talk</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#summary">Summary</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-slide-up">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">
+                    <span class="name-letter">S</span><span class="name-letter">a</span><span class="name-letter">m</span><span class="name-letter">a</span><span class="name-letter">r</span><span class="name-letter">t</span><span class="name-letter">h</span>
+                    <span class="name-space"></span>
+                    <span class="name-letter">K</span><span class="name-letter">a</span><span class="name-letter">p</span><span class="name-letter">d</span><span class="name-letter">i</span>
+                </span>
+            </h1>
+            <div class="hero-role animate-slide-up-delay">
+                <span class="role-text">I craft</span>
+                <span class="role-dynamic">
+                    <span class="role-word active">Elegant Code</span>
+                    <span class="role-word">AI Solutions</span>
+                    <span class="role-word">Scalable Apps</span>
+                    <span class="role-word">User Experiences</span>
+                </span>
+            </div>
+            <p class="hero-description animate-fade-in-delay">
+                3rd-year CSE student passionate about building impactful software. 
+                Specializing in <span class="highlight">Java</span>, <span class="highlight">AI/ML</span>, 
+                and <span class="highlight">Full-Stack Development</span>.
+            </p>
+            <div class="hero-cta animate-fade-in-delay-2">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-delay-2">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>+
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Internships</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>+
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
 
-  <!-- Sections -->
-  <section id="summary">
-    <h2>Summary</h2>
-    <p>3rd-year CSE student with a passion for software development, strong Java skills, and internship experience. Driven to learn, build, and contribute in a team-oriented environment.</p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Turning Ideas Into <span class="gradient-text">Reality</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image-container">
+                        <div class="about-image-glow"></div>
+                        <div class="about-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="about-image-border"></div>
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a <span class="highlight-text">passionate software developer</span> currently pursuing B.Tech in Computer Science at PIEMR, Indore. My journey in tech started with curiosity and has evolved into a deep love for building solutions that make a difference.
+                    </p>
+                    <p>
+                        With hands-on experience from internships at <strong>Infosys Springboard</strong> and <strong>AICTE TechSaksham</strong>, I've worked on real-world projects involving Java, Spring Boot, AI/ML, and more. I believe in writing clean, efficient code and constantly pushing my boundaries.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Clean Code Advocate</h4>
+                                <p>Writing maintainable, scalable solutions</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Problem Solver</h4>
+                                <p>500+ problems solved on coding platforms</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Team Player</h4>
+                                <p>Collaborative approach to development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <ul>
-      <li><b>Java Intern</b> – Infosys Springboard (Dec 2025 – Feb 2026)</li>
-      <li><b>AI/ML Intern</b> – AICTE TechSaksham (IBM SkillsBuild) (Jul–Aug 2025)</li>
-      <li><b>AI/ML Intern</b> – AICTE TechSaksham (Microsoft + SAP) (Dec 2024–Jan 2025)</li>
-      <li><b>Java Intern</b> – Externs Club (Feb–Mar 2024)</li>
-    </ul>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <img src="https://companieslogo.com/img/orig/INFY-b4c4cae7.png?t=1720244492" alt="Infosys">
+                            </div>
+                            <div class="card-info">
+                                <h3>Java Developer Intern</h3>
+                                <span class="company">Infosys Springboard</span>
+                            </div>
+                            <div class="card-date">
+                                <span>Dec 2025 - Feb 2026</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Developed enterprise-level Java applications using Spring Boot framework. Implemented RESTful APIs and worked with microservices architecture.</p>
+                            <div class="card-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Microservices</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+                            </div>
+                            <div class="card-info">
+                                <h3>AI/ML Intern</h3>
+                                <span class="company">AICTE TechSaksham (IBM SkillsBuild)</span>
+                            </div>
+                            <div class="card-date">
+                                <span>Jul - Aug 2025</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Built machine learning models for predictive analytics. Worked with Python, TensorFlow, and various ML algorithms for real-world applications.</p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Data Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft">
+                            </div>
+                            <div class="card-info">
+                                <h3>AI/ML Intern</h3>
+                                <span class="company">AICTE TechSaksham (Microsoft + SAP)</span>
+                            </div>
+                            <div class="card-date">
+                                <span>Dec 2024 - Jan 2025</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Explored AI fundamentals and implemented machine learning solutions. Gained hands-on experience with Azure AI services and data processing.</p>
+                            <div class="card-tags">
+                                <span class="tag">Azure AI</span>
+                                <span class="tag">ML Basics</span>
+                                <span class="tag">Data Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="card-header">
+                            <div class="company-logo logo-placeholder">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>Java Intern</h3>
+                                <span class="company">Externs Club</span>
+                            </div>
+                            <div class="card-date">
+                                <span>Feb - Mar 2024</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Started my professional journey learning core Java concepts and building foundational programming skills through hands-on projects.</p>
+                            <div class="card-tags">
+                                <span class="tag">Core Java</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">DSA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">AI & Cloud Research Agent</div>
-      <div class="card">SMS Spam Detection (NLP)</div>
-      <div class="card">Comprehensive Calculator</div>
-      <div class="card">Online Banking System (Java)</div>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A showcase of my best work, built with passion and precision</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/SamarthKapdi/SkillForge-AI-Driven-Adaptive-Learning-Exam-Generator" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-thumbnail">
+                            <div class="project-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-featured-badge">
+                            <i class="fas fa-star"></i> Featured Project
+                        </div>
+                        <h3 class="project-title">SkillForge - AI Exam Generator</h3>
+                        <p class="project-description">
+                            An AI-powered adaptive learning platform that generates personalized exams based on student performance. Features real-time analytics, intelligent difficulty adjustment, and comprehensive progress tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>AI/ML</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/SamarthKapdi" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-thumbnail">
+                            <div class="project-icon">
+                                <i class="fas fa-heart-pulse"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Health Assistant</h3>
+                        <p class="project-description">
+                            Intelligent health assistant powered by AI to analyze symptoms and provide preliminary health insights with chatbot integration.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>AI/ML</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/SamarthKapdi" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-thumbnail">
+                            <div class="project-icon">
+                                <i class="fas fa-drone"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered UAS System</h3>
+                        <p class="project-description">
+                            Unmanned Aerial System project from IIT Indore BOOTCAMP 5.0, integrating AI/ML for autonomous navigation and object detection.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                            <span>IoT</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/SamarthKapdi/MyPortfolioWebsite" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-thumbnail">
+                            <div class="project-icon">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            This stunning portfolio website you're viewing right now! Built with modern design principles, smooth animations, and premium aesthetics.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>GSAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/SamarthKapdi" target="_blank" class="btn btn-outline">
+                    <span>View All Projects</span>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card"><b>Languages:</b> C, C++, Java</div>
-      <div class="card"><b>Frameworks:</b> Spring, JSP/Servlets</div>
-      <div class="card"><b>Tools:</b> Git/GitHub, Eclipse, IntelliJ</div>
-      <div class="card"><b>Coursework:</b> DSA, OOP, OS</div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="Java">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="C++">
+                            <div class="skill-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <span class="skill-name">C++</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Frameworks & Tools</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span class="skill-name">Spring Boot</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-level">
+                                <div class="level-bar" style="--level: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Other Skills</h3>
+                    </div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>B.Tech CSE | PIEMR, Indore (2023–2027) | SGPA: 8.13</li>
-      <li>Class XII | Shri Gujarati Samaj A.M.N. School, Indore (2022) | 62%</li>
-      <li>Class X | Maharishi Vidya Mandir, Indore (2020) | 80%</li>
-    </ul>
-  </section>
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Journey</span>
+                <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-column">
+                    <h3 class="column-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h3>
+                    <div class="education-cards">
+                        <div class="edu-card glass-card">
+                            <div class="edu-year">2023 - 2027</div>
+                            <h4>B.Tech in Computer Science</h4>
+                            <p class="edu-institution">PIEMR, Indore</p>
+                            <div class="edu-score">
+                                <span class="score-label">SGPA</span>
+                                <span class="score-value">8.13</span>
+                            </div>
+                        </div>
+                        <div class="edu-card glass-card">
+                            <div class="edu-year">2022</div>
+                            <h4>Class XII</h4>
+                            <p class="edu-institution">Shri Gujarati Samaj A.M.N. School, Indore</p>
+                            <div class="edu-score">
+                                <span class="score-label">Score</span>
+                                <span class="score-value">62%</span>
+                            </div>
+                        </div>
+                        <div class="edu-card glass-card">
+                            <div class="edu-year">2020</div>
+                            <h4>Class X</h4>
+                            <p class="edu-institution">Maharishi Vidya Mandir, Indore</p>
+                            <div class="edu-score">
+                                <span class="score-label">Score</span>
+                                <span class="score-value">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-column">
+                    <h3 class="column-title">
+                        <i class="fas fa-certificate"></i>
+                        Certifications
+                    </h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>Programming in Java</h4>
+                                <p>NPTEL • Score: 82%</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>Core & Advanced Java</h4>
+                                <p>Rays Technologies</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>Java Tech Stack & DSA</h4>
+                                <p>Infosys Springboard</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>IBM Java Full Stack</h4>
+                                <p>Coursera • In Progress</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>BOOTCAMP 5.0 - AI/ML UAS</h4>
+                                <p>IIT Indore</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>Workshops Attended</h4>
+                                <p>Flutter & Firebase, OpenCV, Python</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="certifications">
-    <h2>Certifications & Workshops</h2>
-    <ul>
-      <li>NPTEL (82%) – Programming in Java</li>
-      <li>Core & Advanced Java – Rays Technologies</li>
-      <li>C++ – Rays Technologies</li>
-      <li>Infosys Springboard – Java Tech Stack, DSA in Java</li>
-      <li>Coursera – IBM Java Full Stack (Ongoing)</li>
-      <li>BOOTCAMP 5.0 (IIT Indore) – AI/ML-Powered UAS</li>
-      <li>Workshops: Flutter & Firebase, OpenCV, Python</li>
-    </ul>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="section-header text-left">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
+                    </div>
+                    <p class="contact-text">
+                        I'm always excited to discuss new opportunities, interesting projects, or just have a chat about technology. Feel free to reach out!
+                    </p>
+                    <div class="contact-info">
+                        <a href="mailto:kapdisamarth26445@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">kapdisamarth26445@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917723811943" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 7723811943</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Indore, MP, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/SamarthKapdi" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/samarthkapdi" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/SamarthKapdi" target="_blank" class="social-link" aria-label="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/kapdisamarth2641" target="_blank" class="social-link" aria-label="HackerRank">
+                            <i class="fab fa-hackerrank"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form glass-card" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <div class="input-border"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <div class="input-border"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required rows="4" placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-border"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:kapdisamarth26445@gmail.com">kapdisamarth26445@gmail.com</a></p>
-    <p><i class="fas fa-phone"></i> 7723811943</p>
-    <p>
-      <a href="https://github.com/SamarthKapdi"><i class="fab fa-github"></i> GitHub</a> |
-      <a href="https://linkedin.com/in/samarthkapdi"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-      <a href="https://leetcode.com/u/SamarthKapdi"><i class="fas fa-code"></i> LeetCode</a> |
-      <a href="https://www.hackerrank.com/profile/kapdisamarth2641"><i class="fas fa-laptop-code"></i> HackerRank</a>
-    </p>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">SK</span>
+                    <span class="logo-dot"></span>
+                </div>
+                <p class="footer-text">
+                    Designed & Built with <span class="heart">❤️</span> by Samarth Kapdi
+                </p>
+                <p class="footer-copyright">
+                    © 2025 All Rights Reserved
+                </p>
+            </div>
+        </div>
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+            </svg>
+        </div>
+    </footer>
 
-  <footer>
-    <p>© 2025 Samarth Kapdi | Built with ❤️ using HTML & CSS</p>
-  </footer>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <script src="script.js"></script>
 </body>
 </html>
