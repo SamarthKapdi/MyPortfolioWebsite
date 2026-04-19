@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samarthkapdi.in/sitemap.xml
